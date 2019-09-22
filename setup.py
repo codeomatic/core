@@ -1,19 +1,21 @@
 from setuptools import setup, find_namespace_packages
+from os import path
 
 
 # Package metadata.
 
 name = "codeomatic"
 description = "A collection of common code for Codeomatic projects."
-version = "0.1.0"
+version = "0.1.1"
 # Should be one of:
 # 'Development Status :: 3 - Alpha'
 # 'Development Status :: 4 - Beta'
 # 'Development Status :: 5 - Production/Stable'
 release_status = "Development Status :: 3 - Alpha"
 
-with open("README.md", "r") as fh:
-    readme = fh.read()
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as fd:
+    readme = fd.read()
 
 # List of dependencies as they appear on PyPI
 dependencies = []
@@ -23,6 +25,7 @@ setup(
     version=version,
     description=description,
     long_description=readme,
+    long_description_content_type='text/markdown',
     author="Denis Nikolskiy",
     author_email="codeomatics@google.com",
     license="Apache 2.0",
