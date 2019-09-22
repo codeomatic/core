@@ -1,3 +1,9 @@
-include README.md LICENSE
+include README.md LICENSE VERSION
+
 global-exclude *.py[co]
 global-exclude __pycache__
+
+exclude tasks.py
+
+prune .git
+prune venv

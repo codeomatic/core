@@ -6,7 +6,6 @@ from os import path
 
 name = "codeomatic"
 description = "A collection of common code for Codeomatic projects."
-version = "0.1.1"
 # Should be one of:
 # 'Development Status :: 3 - Alpha'
 # 'Development Status :: 4 - Beta'
@@ -16,6 +15,8 @@ release_status = "Development Status :: 3 - Alpha"
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as fd:
     readme = fd.read()
+with open((path.join(this_directory, 'VERSION'))) as fd:
+    version = fd.readline().strip()
 
 # List of dependencies as they appear on PyPI
 dependencies = []
